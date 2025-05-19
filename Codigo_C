@@ -34,8 +34,8 @@ void loop() {
   Serial.printf("Temp: %.1f°C | Umidade SOLO: %.1f%% | pH simulado: %d | Fósforo: %d | Potássio: %d\n",
                 temperatura, umidade_solo, ph, fosforo, potassio);
 
-  // se a umidade do solo estiver abaixo de 30% o rele sera acionado p/ liberar a bomba de agua
-  if (umidade_solo < 30 ) {
+  // se a umidade do solo estiver abaixo de 60% o rele sera acionado p/ liberar a bomba de agua
+  if (umidade_solo < 60 ) {
     digitalWrite(RELE, HIGH);
     digitalWrite(LED, HIGH);
   } else {
